@@ -259,35 +259,47 @@ Ver: SECURITY.md para información completa
 
 ## Errores Técnicos Específicos
 
-### Error: "Uncaught TypeError: Cannot read property..."
-```
-Significa: Script intentó acceder a algo que no existe
+### Error: "Loading the script violates Content Security Policy" / "violates CSP"
 
-Solución:
-→ Recarga página (Ctrl+R)
-→ Intenta de nuevo
-Si repite:
-→ Reporta en GitHub con el mensaje completo del error
+**Síntomas**: ves un error rojo en la consola que menciona "Content Security Policy"
+
+**CAUSA**: Intentaste cargar el script desde una URL externa (CDN/GitHub), pero Instagram lo bloquea
+
+**⚠️ SOLUCIÓN CORRECTA**:
+```
+NO HAGAS:
+❌ Intentar cargar desde CDN
+❌ Usar código que intenta hacer createElement('script')
+
+SÍ HAZ:
+✅ Copia el código COMPLETO de dist/console-paste.js
+✅ Pégalo DIRECTAMENTE en la consola
+✅ Presiona Enter
+✅ Se ejecutará con permisos de Instagram (sin CSP bloqueando)
 ```
 
-### Error: "CORS policy..."
+**Proceso correcto detallado**:
 ```
-Significa: Navegador bloqueó por seguridad
+1. Ve a: https://github.com/DarnerDiaz/InstagramFilters
+2. Carpeta: dist/
+3. Archivo: console-paste.js
+4. Presiona botón RAW (esquina superior derecha)
+5. Ctrl+A para seleccionar todo
+6. Ctrl+C para copiar
+7. Ve a Instagram.com
+8. Abre DevTools (Ctrl+Shift+J)
+9. Pestaña Console
+10. Ctrl+V para pegar
+11. Presiona Enter
+12. ¡Listo! Debe funcionar ahora
+```
 
-Solución:
-→ Usa Chrome en lugar de Firefox temporalmente
-→ Aunque es raro, algunos navegadores son más restrictivos
-```
+Si aún no funciona:
+→ Asegúrate de estar en instagram.com (no app móvil)
+→ Intenta en otro navegador (Chrome si usabas Firefox)
+→ Limpia caché
+→ Desactiva extensiones temporalmente
 
-### Error: "ReferenceError: InstagramFilterApp is not defined"
-```
-Significa: El script no se cargó completamente
-
-Solución:
-→ Espera 3-5 segundos después de pegar código
-→ Vuelve a intentar
-→ Si persiste, recarga página e intenta desde cero
-```
 
 ---
 

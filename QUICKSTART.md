@@ -1,21 +1,48 @@
-# 🚀 Quick Start Guide
+# 🚀 Quick Start Guide - 5 Minutos para Empezar
 
-## 5 minutos para empezar
+## Para Usuarios (SIN instalar nada)
 
-### Para usuarios (SIN instalar nada)
+### OPCIÓN 1️⃣: Pegar Código Directamente en Consola (RECOMENDADO - 30 segundos)
 
 ```
-1. Abre Instagram en navegador
-2. Presiona Ctrl+Shift+J (o Cmd+Option+J en Mac)
-3. Copia y pega este código en la consola:
-
-(async function(){const s=document.createElement('script');s.src='https://raw.githubusercontent.com/yourusername/InstagramFilters/main/dist/bookmarklet.js';s.onload=function(){new InstagramFilterApp().init()};document.head.appendChild(s)})();
-
-4. ¡Presiona Enter!
-5. Aparecerá la interfaz en la esquina superior derecha
+1. ✅ Abre Instagram en navegador
+2. ✅ Presiona Ctrl+Shift+J (o Cmd+Option+J en Mac)
+3. ✅ Copia el código de abajo
+4. ✅ Pégalo en la consola
+5. ✅ Presiona Enter
+6. ✅ ¡Aparecerá la interfaz!
 ```
 
-**Video tutorial**: [Ver en YouTube](https://youtube.com/placeholder)
+**¿Por qué así?** Instagram bloquea scripts desde URLs externas por seguridad. 
+Pegando en la consola se ejecuta con permisos de la página.
+
+### ¿DÓNDE CONSIGO EL CÓDIGO?
+
+**Opción A: Desde GitHub**
+```
+1. Ve a: https://github.com/DarnerDiaz/InstagramFilters
+2. Carpeta: dist/
+3. Archivo: console-paste.js
+4. Cópialo, pégalo en consola, listo!
+```
+
+**Opción B: Construir Localmente**
+```bash
+git clone https://github.com/DarnerDiaz/InstagramFilters.git
+cd InstagramFilters
+npm install
+npm run build
+# El código compilado estará en dist/console-paste.js
+```
+
+### OPCIÓN 2️⃣: Crear un Bookmark (Recómendado si lo usarás muchas veces)
+
+1. Copia el código de `dist/console-paste.js`
+2. Haz clic derecho en barra de marcadores
+3. "Agregar página"
+4. **Nombre**: `Instagram Filters`
+5. **URL**: `javascript:(function(){` + EL_CODIGO_DE_ARRIBA + `})();`
+6. ¡Listo! Ahora en Instagram solo haz clic en el bookmark
 
 ### Para developers (Compila tu propia versión)
 

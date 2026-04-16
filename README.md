@@ -52,20 +52,22 @@ Una herramienta poderosa y moderna para gestionar y filtrar masivamente tus segu
 
 ## 🚀 Instalación Rápida
 
-### Opción 1: Pegar en Consola (5 segundos - SIN instalación)
+### ⚠️ ATENCIÓN IMPORTANTE
+Instagram tiene protecciones de seguridad (Content Security Policy) que **bloquean scripts desde URLs externas**. Debes pegar el código directamente en la consola.
 
-1. **Abre Instagram** en tu navegador
+### Opción 1: Pegar en Consola (5 segundos - SIN instalación) - RECOMENDADO
+
+1. **Abre Instagram** en tu navegador (instagram.com - versión web)
 2. **Abre DevTools**:
    - Windows: `Ctrl + Shift + J`
    - Mac: `Cmd + Option + J`
+   - Firefox: `Ctrl + Shift + K`
 3. **Ve a la pestaña "Console"**
-4. **Copia este escriptlet** y pégalo:
-
-```javascript
-(async function(){const e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/yourusername/InstagramFilters@latest/dist/bookmarklet.js",document.head.appendChild(e)})();
-```
-
-5. **Presiona Enter** - ¡Listo!
+4. **Copia el código compilado**:
+   - Opción A: Desde el archivo [dist/console-paste.js](dist/console-paste.js)
+   - Opción B: Desde el repositorio GitHub en la rama `master`
+5. **Pégalo en la consola** y presiona Enter
+6. ¡La interfaz aparecerá en la esquina superior derecha!
 
 ### Opción 2: Crear un Bookmarklet (Recómendado)
 
